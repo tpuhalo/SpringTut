@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	default-destroy-method="preDestroy" default-init-method="postConstruct"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+
+
+	<bean id="myOrganization" class="com.tpuhalo.domain.Organization">
+		<constructor-arg value="Google" index="0" name="name"></constructor-arg>
+		<constructor-arg value="1996" index="1" name="year"></constructor-arg>
+		<property name="postalCode" value="21000"></property>
+		<property name="numOfEmp" value="285"></property>
+		<property name="message" value="Work hard have fun !!!"></property>
+		<property name="businessService" ref="ecommerceService"></property>
+
+	</bean>
+	<bean id="cloudService"
+		class="com.tpuhalo.secondMaven.serviceimpl.CloudServiceImpl">
+	</bean>
+	<bean id="ecommerceService"
+		class="com.tpuhalo.secondMaven.serviceimpl.EcommerceServiceImpl">
+	</bean>
+	
+	<context:annotation-config></context:annotation-config>
+	<context:component-scan base-package="com.tpuhalo.domain"></context:component-scan>
+</beans>

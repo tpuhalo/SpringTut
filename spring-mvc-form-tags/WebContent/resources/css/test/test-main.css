@@ -1,0 +1,45 @@
+input[type=text] {
+	padding: 10px;
+	margin: 10px;
+	font-size: 20px
+}
+
+input[type=submit] {
+	border: none;
+	background-color: green;
+	color: white;
+	padding: 16px;
+	margin: 16px;
+	cursor: pointer;
+	font-size: 20px
+}
+
+h1, h2 {
+	color: red;
+	text-align: center
+}
+
+h3 {
+	color: red;
+	font-size: 15px
+}
+
+ul {
+	list .style-type: none;
+	margin: 0;
+	padding: 0
+}
+
+b {
+	color: black
+}
+
+select {
+	padding: 7px;
+	margin: 7px;
+	font-size: 15px
+}
+
+div {
+	align: center
+}
